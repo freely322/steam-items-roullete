@@ -1,0 +1,194 @@
+.main-block2 {
+  height: 20%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+}
+
+.profile {
+  height: 100%;
+  border-radius: 2px;
+}
+
+.profile__not-logged {
+  height: 100%;
+}
+
+.profile__not-logged_image {
+  background: #3ba344;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 200px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  &:hover {
+    box-shadow: 0 0 50px rgba(42, 164, 42, 0.3);
+  }
+}
+
+.profile__not-logged_steam{
+  position: absolute;
+  top: -17%;
+  left: -37px;
+}
+
+.profile__not-logged_image_text {
+  color: white;
+  margin-right: 15%;
+  z-index: 10;
+}
+
+.profile__not-logged_image_text_signin {
+  font-size: 36pt;
+  line-height: 36pt;
+  font-weight: bold;
+}
+
+.profile__not-logged_image_text_through{
+  font-size: 16pt;
+  line-height: 16pt;
+}
+
+.profile__logged {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+.profile_avatar {
+  position: relative;
+  height: 100%;
+  img {
+    height: 100%;
+    width: auto;
+    float: right;
+  }
+  &:hover .profile_avatar_hover {
+    display: block;
+  }
+}
+.profile_avatar_hover {
+  display: none;
+  background: linear-gradient(45deg, transparent 0, rgba(0, 0, 0, 0.85) 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  div {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0.5;
+    font-size: 14pt;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+.profile_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+  width: 100%;
+}
+.profile_stats {
+  display: flex;
+  justify-content: space-evenly;
+  height: 55%;
+}
+.profile_stat {
+  color: #fff;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.profile_stat_value {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18pt;
+  line-height: 18pt;
+}
+.profile_stat_name {
+  margin: 5px 0;
+  width: 100%;
+  height: 30%;
+}
+.profile_controls {
+  min-height: 33.5px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  button {
+    padding: 0;
+  }
+}
+.profile_controls_inventory {
+  cursor: pointer;
+  background-color: rgba(70, 70, 70, 0.5);
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 0, 0, 0.5);
+  }
+}
+.profile_controls_settings {
+  cursor: pointer;
+  background-color: rgba(70, 70, 70, 0.5);
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 0, 0, 0.5);
+  }
+}
+.profile__settings {
+  color: white;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.profile_settings_input {
+  display: flex;
+  justify-content: space-evenly;
+  height: 55%;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  label {
+    width: 90%;
+  }
+}
+.profile_tradelink {
+  border: 0;
+  width: 90%;
+  height: 35px;
+  background: rgba(183, 183, 183, 0.15);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  padding: 0 5px;
+  color: white;
+}

@@ -1,0 +1,100 @@
+.inventory_item {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.inBet {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+.inventory_item_label-wrapper {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    font-size: 8pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 3px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100%;
+    width: 100%;
+    &:hover {
+        transition: 1s;
+        opacity: 1;
+    }
+}
+
+.inventory_item_select-wrapper {
+    position: absolute;
+    bottom: 0;
+    font-size: 8pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 3px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100%;
+    width: 100%;
+}
+
+.inventory_item_label {
+    font-family: "Roboto", "Comic Sans MS", serif;
+    word-wrap: break-word;
+    width: 85%;
+    text-align: center;
+}
+
+.arcana {
+    box-shadow: 0 0 10px rgba(128, 252, 104, 0.65);
+    text-shadow: 0 0 3px rgba(128, 252, 104, 0.65);
+    &:hover {
+        box-shadow: 0 0 15px #80fc68;
+    }
+}
+
+.mythical {
+    box-shadow: 0 0 10px rgba(137, 58, 205, 0.65);
+    text-shadow: 0 0 3px rgba(137, 58, 205, 0.65);
+    &:hover {
+        box-shadow: 0 0 15px #893acd;
+    }
+}
+
+.immortal {
+    box-shadow: 0 0 10px rgba(253, 145, 59, 0.65);
+    text-shadow: 0 0 3px rgba(253, 145, 59, 0.65);
+    &:hover {
+        box-shadow: 0 0 15px #fd913b;
+    }
+}
+
+.legendary {
+    box-shadow: 0 0 10px rgba(205, 58, 176, 0.65);
+    text-shadow: 0 0 3px rgba(205, 58, 176, 0.65);
+    &:hover {
+        box-shadow: 0 0 15px #cd3ab0;
+    }
+}
+
+.rare {
+    box-shadow: 0 0 10px rgba(59, 118, 253, 0.65);
+    text-shadow: 0 0 3px rgba(59, 118, 253, 0.65);
+    &:hover {
+        box-shadow: 0 0 15px #3b76fd;
+    }
+}
+
+.uncommon {
+    box-shadow: 0 0 10px rgba(138, 187, 254, 0.65);
+    text-shadow: 0 0 3px rgba(138, 187, 254, 0.65);
+    &:hover {
+        box-shadow: 0 0 15px #8abbfe;
+    }
+}

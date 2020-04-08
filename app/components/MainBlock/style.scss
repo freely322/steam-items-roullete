@@ -1,0 +1,271 @@
+.main {
+    background-size: cover;
+    height: 100%;
+    float: left;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.main-block1 {
+    width: 58%;
+    float: left;
+    height: 90%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+}
+
+.winner-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url("http://wallpapersdota2.com/wp-content/uploads/2014/12/wallpapersdota2.com-450.png") no-repeat center center;
+  background-size: auto 100%;
+  z-index: 100;
+}
+
+._hidden {
+  top: -100%;
+}
+
+._shown {
+  top: 0;
+}
+
+.winner-avatar-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+}
+
+._yellow {
+  transition: 1s;
+  transition-delay: 1.5s;
+  box-shadow: 0 0 30px rgb(248, 226, 85);
+}
+
+._red {
+  box-shadow: 0 0 30px rgb(194, 61, 33);
+}
+
+.multicast {
+  font-family: "DK Toverheks", serif;
+  margin-bottom: 25px;
+  text-align: center;
+  text-shadow: 0 0 10px rgb(194, 61, 33);
+}
+
+._stage1 {
+  font-size: 52px;
+  transition: 1s;
+  opacity: 1;
+  color: rgb(248, 226, 85);
+}
+
+._stage0 {
+  color: rgb(194, 61, 33);
+  opacity: 0;
+  font-size: 1px;
+}
+
+.game {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.game {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.game_stats {
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.game_stat{
+    width: 28%;
+    height:100%;
+    display:flex;
+    background:rgba(25, 25, 25, 0.25);
+    position:relative;
+}
+
+.game_stat_label {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game_stat_label_text {
+    display: flex;
+    color: white;
+    text-align: center;
+    font-size: 12pt;
+}
+
+ .game_stat_value {
+     height: calc(100% - 40px);
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: white;
+     font-size: 22pt;
+ }
+
+.game_timer {
+    background: rgba(255, 0, 0, 0.5);
+    box-shadow: 0 5px 10px black;
+    width: 100%;
+    height: 30%
+}
+
+.game_bets{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game_bets_label {
+    display: flex;
+    width: 92%;
+    height: 40px;
+    min-height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.game_bets_label_text {
+    display: flex;
+    color: white;
+    text-align: center;
+    font-size: 12pt;
+}
+
+.game_bets-list{
+    overflow: hidden;
+    margin-top: 10px;
+    width: 90%;
+    height: 90%;
+}
+
+.game_bets-list_bet {
+  background: rgba(0, 0, 0, 0.25);
+  height: 85px;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game_bets-list_bet_items {
+   overflow: hidden;
+   width: 60%;
+   height: calc(100% - 15px);
+   margin-right: 7.5px;
+   background: rgba(0, 0, 0, 0.25);
+   border-radius: 5px;
+   display: flex;
+   flex-direction: row;
+   justify-content: start;
+   align-items: center;
+}
+
+.winner-selecting {
+  height: 100px;
+  position: absolute;
+  transition-property: transform;
+  transition: 8s;
+  transition-timing-function: cubic-bezier(.23,.84,.65,.99);
+}
+
+.game_prizepool {
+  overflow: hidden;
+  width: 100%;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.prizepool {
+  color: white;
+  transition: 1s;
+}
+
+.highlight {
+  color: #31ce32;
+  transform: scale(1.1);
+}
+
+.game_bets-list_bet_meta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.game_bets-list_bet_meta_avatar {
+     height: 70px;
+     width: 70px;
+     background: rgba(200, 200, 200, 0.5);
+     border-radius: 5px;
+     margin-left: 7.5px;
+}
+
+.game_bets-list_bet_meta_avatar_img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.game_bets-list_bet_meta_data {
+     height: 70px;
+     width: calc(100% - 85px);
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     color: white;
+     padding: 0 0 0 15px;
+}
+
+.game_bets-list_bet_meta_data_stats_name {
+     float: left;
+}

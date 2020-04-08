@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('roboto'), url('../fonts/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto-Regular.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto'), local('roboto'), url('../fonts/Roboto-Bold.woff') format('woff'), url('../fonts/Roboto-Bold.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Roboto'), local('roboto'), url('../fonts/Roboto-Light.woff') format('woff'), url('../fonts/Roboto-Light.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: "DK Toverheks";
+    font-style: normal;
+    font-weight: 400;
+    src: local("DK Toverheks"), url('../fonts/Dktoverheks-7AZE.woff') format('woff'), url('../fonts/Dktoverheks-7AZE.ttf') format('truetype')
+}
+
+.app-page-title{
+    text-align: center;
+    color: #7c795d;
+    //font-family: 'Trocchi', serif;
+    font-size: 45px;
+    font-weight: normal;
+    line-height: 48px;
+}
+
+.site {
+    font: 14px "Roboto", "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    min-width: 1024px;
+    min-height: 480px;
+}
+
+.block2-3Wrapper {
+    width: 30%;
+    float: left;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+*{
+    transition: 0.5s ease p;
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: #00B7FF;
+    text-decoration: none;
+}
+
+p {
+    margin: 0
+}
