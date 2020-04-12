@@ -379,29 +379,41 @@ class MainBlock extends Component {
                       </div>
                       <div className="chat_msg-list_msg_data">
                         <p className="chat_msg-list_msg_data_text">
-                          User is entering to the profile steam
-                          Press the button deposit
-                          Choosing the goods
-                          Pressing again the button deposit
-                          Acceptind trade
-                          Choosing the goods for the bets from the goods of the sait
-                          Marking he's bet and wait
-                          In case of winning seeing choosing him
-                          Push the button withdraw
-                          Choosing the goods
-                          And having the chance for the order to exchange
+                          User is entering to the profile steam;
+                          Press the button deposit;
+                          Choosing the goods;
+                          Pressing again the button deposit;
+                          Acceptind trade;
+                          Choosing the goods for the bets from the goods of the sait;
+                          Marking he's bet and wait;
+                          In case of winning seeing choosing him;
+                          Push the button withdraw;
+                          Choosing the goods;
+                          And having the chance for the order to exchange.
                         </p>
                       </div>
                     </div>
                     <div className="chat_msg-list_msg">
                       <div className="chat_msg-list_msg_meta">
                         <p className="chat_msg-list_msg_meta_nickname">
-                          How much the commotion will get low if i add  a nick e4zy.bet?
+                          How much the commission will get low if i add  a nick e4zy.bet?
                         </p>
                       </div>
                       <div className="chat_msg-list_msg_data">
                         <p className="chat_msg-list_msg_data_text">
-                          The commotion will get low 3 % if you're nick will have e4zy.bet
+                          The commotion will get low 3 % if you're nick will have e4zy.bet.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="chat_msg-list_msg">
+                      <div className="chat_msg-list_msg_meta">
+                        <p className="chat_msg-list_msg_meta_nickname">
+                          How much the commission you get from each bet?
+                        </p>
+                      </div>
+                      <div className="chat_msg-list_msg_data">
+                        <p className="chat_msg-list_msg_data_text">
+                          We have commission 3-8 persent, it all depends on the amount of winnings(  if you write name of the website e4zy.bet you can add plus 15 persent to your winning).
                         </p>
                       </div>
                     </div>
@@ -413,7 +425,7 @@ class MainBlock extends Component {
                       </div>
                       <div className="chat_msg-list_msg_data">
                         <p className="chat_msg-list_msg_data_text">
-                          The benefits will come to you as offline exchange in the system steam,you can withdraw thought the sait steam or thought the client
+                          The benefits will come to you as offline exchange in the system steam,you can withdraw thought the sait steam or thought the client.
                         </p>
                       </div>
                     </div>
@@ -437,7 +449,7 @@ class MainBlock extends Component {
                       </div>
                       <div className="chat_msg-list_msg_data">
                         <p className="chat_msg-list_msg_data_text">
-                          In our sait you can place as much its please you, there is not limit for you
+                          In our sait you can place as much its please you, there is not limit for you.
                         </p>
                       </div>
                     </div>
@@ -450,6 +462,18 @@ class MainBlock extends Component {
                       <div className="chat_msg-list_msg_data">
                         <p className="chat_msg-list_msg_data_text">
                           I may not get full amount of you're goods because of the sait in keeping commotion 8% of each bet. And 5% if you're nick include adress of the our sait.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="chat_msg-list_msg">
+                      <div className="chat_msg-list_msg_meta">
+                        <p className="chat_msg-list_msg_meta_nickname">
+                          There are no answer my question here, how can I solve my problem?
+                        </p>
+                      </div>
+                      <div className="chat_msg-list_msg_data">
+                        <p className="chat_msg-list_msg_data_text">
+                          Faq if you have any questions please text on our e-mail e4zyhelp@gmail.com
                         </p>
                       </div>
                     </div>
