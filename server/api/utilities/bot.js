@@ -6,7 +6,7 @@ const SteamUser = require('steam-user');
 
 export const client = new SteamUser();
 export let community = new SteamCommunity();
-export const manager = new TradeOfferManager({
+export let manager = new TradeOfferManager({
   "steam": client,
   "domain": `https://${config.host}`,
   "community": community,

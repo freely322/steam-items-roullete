@@ -111,57 +111,63 @@ export const withdrawItems = (req, res) => {
     try {
         User.findOne({ id: id })
         .then(user => {
-            if (user.tradeLink) {
-                const offer = manager.createOffer(user.tradeLink);
-                console.log(offer);
-                manager.loadInventory(appid, contextid, true, (err, myInv) => {
-                    if (err) {
-                        console.log(err);
-                    } else {
+            if (!user.tradeLink)
+                io.to(`${req.body.socket}`).emit('error', 'Set tradelink, please');
+            else {
+                let offer = manager.createOffer(user.tradeLink);
+
+                manager.getInventoryContents(appid, contextid, true, (err, myInv) => {
+                    if (!err) {
                         items.map(item => {
                             const myItem = myInv.find(my => my.name === item.name);
-                            console.log('Inv', myInv);
                             if (myItem) {
                                 offer.addMyItem(myItem);
                             }
                         });
 
                         offer.send((err, status) => {
-                            let currentTime = moment();
-                            let check = setInterval(() => {
-                                let newTime = moment();
-                                if (newTime.diff(currentTime, 'm') > 2) {
-                                    clearInterval(check);
-                                    io.to(`${req.body.socket}`).emit('error', 'trade offer failed')
-                                }
-                                offer.update((err) => {
-                                    console.log("ERROR", err);
-                                    community.acceptConfirmationForObject('aorRc0FPSL31FzB8X9LS/EJUVUc=', offer.id, (err) => {
-                                        if (err) {
-                                            console.log(err)
-                                        }
-                                    });
-                                    if (offer.state === 3) {
-                                        clearInterval(check);
-                                        user.inventory = _.xorBy(user.inventory, items, 'id');
-                                        user.save((err, result) => {
-                                            io.to(`${req.body.socket}`).emit('withdraw', items);
-                                        })
-                                    }
-                                    console.log('OFFER', offer)
+                            if (err)
+                                console.log('error!!!', err);
+
+                            console.log(`Current offer status: ${status}`);
+
+                            if (status === 'pending') {
+                                community.acceptConfirmationForObject('aorRc0FPSL31FzB8X9LS/EJUVUc=', offer.id, (err) => {
+                                    if (!err) {
+                                        let check = setInterval(() => {
+                                            offer.update((err) => {
+                                                console.log(`Current offer state ${offer.state}`);
+
+                                                if (offer.state === 3) {
+                                                    clearInterval(check);
+
+                                                    console.log('User Save...');
+
+                                                    user.inventory = _.xorBy(user.inventory, items, 'id');
+                                                    user.save((err, result) => {
+                                                        if (err)
+                                                            console.log('User don\'t saved');
+
+                                                        console.log('User Saved!');
+
+                                                        io.to(`${req.body.socket}`).emit('withdraw', items);
+                                                    });
+                                                }
+                                            });
+                                        }, 10000);
+
+                                        console.log('Offer confirmed with Steam Guard!');
+                                    } else
+                                        console.log(err);
                                 });
-                            }, 10000);
-                            if (err) {
-                                console.log(err);
                             } else {
                                 io.to(`${req.body.socket}`).emit('info', `Sent offer. Status: ${status}.`);
                                 console.log(`Sent offer. Status: ${status}.`);
                             }
                         });
-                    }
+                    } else
+                        console.log(err);
                 });
-            } else {
-                io.to(`${req.body.socket}`).emit('error', 'Set tradelink, please')
             }
         })
         .catch(err => res.send(err));
@@ -169,4 +175,3 @@ export const withdrawItems = (req, res) => {
         console.log(e.message)
     }
 };
-
